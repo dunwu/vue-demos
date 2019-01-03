@@ -1,0 +1,32 @@
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="app">
+  <!-- 只有在 `keyCode` 是 13 时调用 `vm.submit()` -->
+  v-on:keyup.5: <input v-on:keyup.Q="keyupQ"/><br/>
+  <!-- 同上 -->
+  v-on:keyup.enter: <input v-on:keyup.enter="keyupEnter"/><br/>
+  <!-- 缩写语法 -->
+  <!--v-on:keyup.enter: <input @keyup.enter="keyupEnter">-->
+
+  <!-- Alt + C -->
+  @keyup.alt.67: <input @keyup.alt.67="doAltC"/><br/>
+
+  <!-- Ctrl + Click -->
+  @click.ctrl: <input @click.ctrl="doCtrl"/><br/>
+
+  <!-- 即使 Alt 或 Shift 被一同按下时也会触发 -->
+  <button @click.ctrl="onClick">@click.ctrl</button>
+
+  <!-- 有且只有 Ctrl 被按下的时候才触发 -->
+  <button @click.ctrl.exact="onCtrlClick">@click.ctrl.exact</button>
+
+  <!-- 没有任何系统修饰符被按下的时候才触发 -->
+  <button @click.exact="onClick">@click.exact</button>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
