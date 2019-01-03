@@ -1,0 +1,19 @@
+<html>
+<head>
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+<div id="app">
+  <ul v-if="todos.length">
+    <li v-for="todo in todos">
+      {{ todo }}
+    </li>
+  </ul>
+  <p v-else>No todos left!</p>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+<div id="app">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }} - {{ item.message }}
+  </li>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+
+<div id="app">
+  <template v-if="loginType === 'username'">
+    <label>Username</label>
+    <input placeholder="Enter your username">
+  </template>
+  <template v-else>
+    <label>Email</label>
+    <input placeholder="Enter your email address">
+  </template>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
