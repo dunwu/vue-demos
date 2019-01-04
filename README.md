@@ -1,1 +1,1 @@
-# vue-demos
+# vue-tutorial
