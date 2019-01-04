@@ -1,0 +1,17 @@
+<html>
+<head>
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="app">
+  <blog-post
+    v-for="post in posts"
+    v-bind:key="post.id"
+    v-bind:post="post"
+  ></blog-post>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

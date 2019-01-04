@@ -1,0 +1,25 @@
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="index.css">
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="app">
+  <button
+    v-for="tab in tabs"
+    v-bind:key="tab"
+    v-bind:class="['tab-button', { active: currentTab === tab }]"
+    v-on:click="currentTab = tab"
+  >{{ tab }}
+  </button>
+
+  <component
+    v-bind:is="currentTabComponent"
+    class="tab"
+  ></component>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

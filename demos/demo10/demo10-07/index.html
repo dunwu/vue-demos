@@ -1,0 +1,22 @@
+<html xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <script src="../../lib/vue.min.js"></script>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="app">
+  <custom-input v-model="searchText"></custom-input>
+  <button v-on:click="onSearch">查询</button>
+  <div id="blogposts" :style="{ fontSize: postFontSize + 'em' }">
+    <blog-post
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:post="post"
+      v-on:enlarge-text="onEnlargeText"
+    ></blog-post>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
