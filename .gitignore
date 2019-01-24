@@ -1,11 +1,24 @@
+################ JAVA ################
+# temp folders
+classes
+target
+logs
+
+# temp files
+*.class
+*.jar
+*.war
+
+
+################ JAVASCRIPT ################
 # dependencies
 node_modules
 
 # temp folders
 build
 dist
-.nuxt
 _book
+_jsdoc
 
 # temp files
 *.log
@@ -14,6 +27,12 @@ yarn-debug.log*
 yarn-error.log*
 bundle*.js
 
-# intellij
+
+################ IDEA ################
 .idea
 *.iml
+
+
+################ Eclipse ################
+.classpath
+.project
