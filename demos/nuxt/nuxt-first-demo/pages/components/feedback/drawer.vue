@@ -47,6 +47,7 @@
 </template>
 <script>
 export default {
+  transition: { name: 'fade', mode: 'out-in' },
   data() {
     return {
       visible: false,

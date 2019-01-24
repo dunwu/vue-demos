@@ -14,6 +14,7 @@
           class="button--grey"
           >GitHub</a
         >
+        <p>{{ content }}}</p>
       </div>
     </div>
   </section>
@@ -25,6 +26,19 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  asyncData({ app }) {
+    return app.$axios
+      .get(`http://localhost:8080/api/hello`)
+      .then(res => {
+        if (res.data) {
+          console.log('res', JSON.parse(res))
+          return { content: res.data }
+        }
+      })
+      .catch(e => {
+        console.error({ statusCode: 404, message: 'Post not found' })
+      })
   }
 }
 </script>

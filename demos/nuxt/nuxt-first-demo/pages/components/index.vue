@@ -11,6 +11,7 @@
 </template>
 <script>
 export default {
+  transition: { name: 'fade', mode: 'out-in' },
   methods: {
     onPanelChange(value, mode) {
       console.log(value, mode)

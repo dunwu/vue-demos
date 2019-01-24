@@ -24,7 +24,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.css'],
+  css: ['ant-design-vue/dist/antd.css', 'assets/main.css'],
 
   /*
    ** Plugins to load before mounting the App
@@ -37,13 +37,20 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxtjs/pwa'
   ],
   /*
    ** Axios module configuration
    */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    proxy: true,
+    retry: { retries: 3 },
+    //开发模式下开启debug
+    debug: process.env._ENV == 'development' ? false : true,
+    //设置不同环境的请求地址
+    baseURL: 'http://localhost:8080/api'
+    // withCredentials: true
   },
 
   /*
@@ -63,6 +70,14 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+
+  proxy: {
+    //开启代理
+    '/api': {
+      target: 'http://localhost:8080/',
+      pathRewrite: { '^/api': '/' }
     }
   }
 }

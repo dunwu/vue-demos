@@ -18,3 +18,9 @@
   font-size: 24px;
 }
 </style>
+
+<script>
+export default {
+  transition: 'test'
+}
+</script>
