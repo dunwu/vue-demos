@@ -6,8 +6,7 @@
 
 <script>
 export default {
-  name: 'GlobalFooter',
-  props: ['copyright', 'linkList']
+  name: 'GlobalFooter'
 }
 </script>
 

@@ -48,8 +48,7 @@
         <a-button type="primary" disabled>Primary(disabled)</a-button>
         <br />
         <a-button>Default</a-button>
-        <a-button disabled>Default(disabled)</a-button>
-        <br />
+        <a-button disabled>Default(disabled)</a-button>W <br />
         <a-button type="dashed">Dashed</a-button>
         <a-button type="dashed" disabled>Dashed(disabled)</a-button>
         <div
@@ -114,7 +113,7 @@
 
 <script>
 export default {
-  transition: { name: 'fade', mode: 'out-in' },
+  transition: { name: 'slide', mode: 'out-in' },
   data() {
     return {
       loading: false,

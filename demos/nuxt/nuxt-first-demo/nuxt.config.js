@@ -19,12 +19,12 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: 'cyan' },
 
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.css', 'assets/main.css'],
+  css: ['ant-design-vue/dist/antd.css', '~/assets/main.css'],
 
   /*
    ** Plugins to load before mounting the App

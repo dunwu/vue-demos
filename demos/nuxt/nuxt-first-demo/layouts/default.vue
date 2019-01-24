@@ -1,6 +1,6 @@
 <template>
   <a-layout id="components-layout-demo-side" style="min-height: 100vh">
-    <a-layout-sider collapsible v-model="collapsed">
+    <a-layout-sider v-model="collapsed" collapsible>
       <div class="logo" />
       <global-menu></global-menu>
     </a-layout-sider>

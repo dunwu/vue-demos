@@ -1,10 +1,10 @@
 <template>
   <a-menu
     theme="dark"
-    :defaultSelectedKeys="['1']"
-    :openKeys="openKeys"
-    @openChange="onOpenChange"
+    :default-selected-keys="['1']"
+    :open-keys="openKeys"
     mode="inline"
+    @openChange="onOpenChange"
   >
     <a-menu-item key="home">
       <a-icon type="home" />

@@ -7,8 +7,8 @@
           title="Basic Drawer"
           placement="right"
           :closable="false"
-          @close="onClose"
           :visible="visible"
+          @close="onClose"
         >
           <p>Some contents...</p>
           <p>Some contents...</p>
@@ -20,8 +20,8 @@
     <a-card title="自定义位置">
       <div>
         <a-radio-group
+          :default-value="placement"
           style="margin-right: 8px"
-          :defaultValue="placement"
           @change="onChange"
         >
           <a-radio value="top">top</a-radio>
@@ -34,8 +34,8 @@
           title="Basic Drawer"
           :placement="placement"
           :closable="false"
-          @close="onClose"
           :visible="visible"
+          @close="onClose"
         >
           <p>Some contents...</p>
           <p>Some contents...</p>
@@ -47,7 +47,7 @@
 </template>
 <script>
 export default {
-  transition: { name: 'fade', mode: 'out-in' },
+  transition: { name: 'slide', mode: 'out-in' },
   data() {
     return {
       visible: false,

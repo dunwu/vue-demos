@@ -3,38 +3,34 @@
     <div>
       <logo />
       <h1 class="title">nuxt-first-demo</h1>
-      <h2 class="subtitle">My swell Nuxt.js project</h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
-        <p>{{ content }}}</p>
-      </div>
+      <p>{{ content }}</p>
+      <button @click="increment">{{ counter }}</button>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     Logo
   },
+  fetch({ store }) {
+    store.commit('increment')
+  },
+  computed: mapState(['counter']),
+  methods: {
+    increment() {
+      this.$store.commit('increment')
+    }
+  },
   asyncData({ app }) {
     return app.$axios
       .get(`http://localhost:8080/api/hello`)
       .then(res => {
-        if (res.data) {
-          console.log('res', JSON.parse(res))
-          return { content: res.data }
-        }
+        return { content: res.data }
       })
       .catch(e => {
         console.error({ statusCode: 404, message: 'Post not found' })
