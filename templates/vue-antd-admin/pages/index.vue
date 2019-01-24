@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <logo />
-      <h1 class="title">nuxt-first-demo</h1>
+      <h1 class="title">vue-antd-admin</h1>
       <p>{{ content }}</p>
       <button @click="increment">{{ counter }}</button>
     </div>
