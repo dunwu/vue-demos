@@ -5,11 +5,20 @@ export default {
     theme: 'dark',
     layout: 'side',
     systemName: 'Vue Antd Admin',
-    copyright: '2019 @ ZHANG PENG',
+    copyright: '2019 ZHANG PENG',
     footerLinks: [
-      { link: 'https://pro.ant.design', name: 'Pro首页' },
-      { link: 'https://github.com/iczer/vue-antd-admin', icon: 'github' },
-      { link: 'https://ant.design', name: 'Ant Design' }
+      { link: 'https://github.com/vuejs/vue', icon: 'github', name: 'vue' },
+      { link: 'https://github.com/nuxt/nuxt.js', icon: 'github', name: 'nuxt' },
+      {
+        link: 'https://github.com/vueComponent/ant-design-vue',
+        icon: 'github',
+        name: 'ant-design-vue'
+      },
+      {
+        link: 'https://github.com/dunwu/vue-tutorial',
+        icon: 'github',
+        name: 'vue-tutorial'
+      }
     ],
     multipage: true
   },

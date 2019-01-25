@@ -24,7 +24,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.css', '~/assets/main.css'],
+  css: ['ant-design-vue/dist/antd.css', '@/assets/main.css'],
 
   /*
    ** Plugins to load before mounting the App
@@ -38,7 +38,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Axios module configuration
@@ -79,5 +80,9 @@ module.exports = {
       target: 'http://localhost:8080/',
       pathRewrite: { '^/api': '/' }
     }
+  },
+
+  styleResources: {
+    less: './assets/**/*.less'
   }
 }
